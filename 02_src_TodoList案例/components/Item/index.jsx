@@ -35,7 +35,7 @@ export default class Item extends Component {
     return (
       <li className='item' style={{ backgroundColor: mouse ? "#ddd" : "white" }} onMouseLeave={this.onMouseLeaveOrEnter(false)} onMouseEnter={this.onMouseLeaveOrEnter(true)}>
         <label>
-          <input type="checkbox" defaultChecked={done} onChange={this.changeCheckStatus(id)}></input>
+          <input type="checkbox" defaultChecked={done} checked={done} onChange={this.changeCheckStatus(id)}></input>
           <span>{name}</span>
         </label>
         <button style={{ display: mouse ? "block" : "none" }} onClick={this.removeById(id)}>删除</button>
